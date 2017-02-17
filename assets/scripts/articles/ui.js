@@ -14,6 +14,7 @@ const showSuccess = (data) => {
   console.log(data);
   let showArticleHtml = showArticleTemplate({ article: data.article });
   $('.content').empty().append(showArticleHtml);
+  $('.show-input').val('');
 };
 
 const createSuccess = (data) => {

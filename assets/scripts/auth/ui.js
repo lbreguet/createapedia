@@ -1,22 +1,34 @@
 'use strict';
 
 const signUpSuccess = (data) => {
-  $('#sign-up').hide().val('');
+  $('.signup-email').val('');
+  $('.signup-password').val('');
+  $('#sign-up').hide();
   if (data) {
     console.log(data);
   }
 };
 
 const signInSuccess = (data) => {
-  $('#sign-up').val('');
-  $('#sign-in').val('');
   $('#sign-up').hide();
+  $('.signup-email').val('');
+  $('.signup-password').val('');
+  $('.signin-email').val('');
+  $('.signin-password').val('');
   $('#sign-in').hide();
   $('#change-password').show();
   $('#sign-out').show();
   $('#article-destroy').show();
   $('#edit-article').show();
   $('#post-article').show();
+  if (data) {
+    console.log(data);
+  }
+};
+
+const changePasswordSuccess = (data) => {
+  $('.new-password').val('');
+  $('.old-password').val('');
   if (data) {
     console.log(data);
   }
@@ -45,6 +57,6 @@ module.exports = {
   signUpSuccess,
   signInSuccess,
   signOutSuccess,
-  // success,
+  changePasswordSuccess,
   failure
 };

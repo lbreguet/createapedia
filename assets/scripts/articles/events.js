@@ -6,14 +6,19 @@ const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
 
+const onMenu = function (event) {
+  event.preventDefault();
+  api.index()
+  .then(ui.indexSuccess)
+  .catch(ui.failure);
+};
+
 const onGetArticles = function (event) {
   event.preventDefault();
   let data =  getFormFields(event.target);
 
   if (data.article.id.length === 0) {
-    api.index()
-    .then(ui.indexSuccess)
-    .catch(ui.failure);
+    api.show.then(ui.failure);
   } else {
     api.show(data.article.id)
     .then(ui.showSuccess)
@@ -50,6 +55,7 @@ const addHandlers = () => {
   $('#edit-article').hide();
   $('#post-article').hide();
   $('#article-destroy').hide();
+  $('#menu').on('submit', onMenu);
   $("#article-search").on('submit', onGetArticles);
   $("#article-destroy").on('submit', onDestroyArticles);
   $("#edit-article").on('submit', onUpdateArticles);
