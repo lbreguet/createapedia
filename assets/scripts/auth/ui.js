@@ -1,12 +1,5 @@
 'use strict';
 
-// const success = (data) => {
-//   // handles success
-//   if (data) {
-//     console.log(data);
-//   }
-// };
-
 const signUpSuccess = (data) => {
   $('#sign-up').hide().val('');
   if (data) {
@@ -44,7 +37,6 @@ const signOutSuccess = (data) => {
 
 
 const failure = (error) => {
-  // handles error
   console.error(error);
 };
 

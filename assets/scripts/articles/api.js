@@ -45,7 +45,7 @@ const destroy = function (id) {
     method: 'DELETE',
     headers: {
       Authorization: `Token token=${store.user.token}`
-    }
+    },
   });
 };
 

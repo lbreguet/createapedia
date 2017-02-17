@@ -1,25 +1,23 @@
 'use strict';
 
-// const success = (data) => {
-//   // handles success
-//   if (data) {
-//     console.log(data);
-//   }
-// };
+const showArticlesTemplate = require('../templates/article-listing.handlebars');
+const showArticleTemplate = require('../templates/article-show.handlebars');
+
 
 const indexSuccess = (data) => {
   console.log(data);
-  $('.title').text(data.title);
+  let showArticlesHtml = showArticlesTemplate({ articles: data.articles });
+  $('.content').empty().append(showArticlesHtml);
 };
 
 const showSuccess = (data) => {
   console.log(data);
-  // $('');
+  let showArticleHtml = showArticleTemplate({ article: data.article });
+  $('.content').empty().append(showArticleHtml);
 };
 
 const createSuccess = (data) => {
   console.log(data);
-
 };
 
 const updateSuccess = (data) => {
