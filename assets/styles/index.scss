@@ -1,7 +1,28 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-#article-search {
+$black: #000;
+$white: #fff;
+$red: #f00;
+
+.article-search {
   clear: right;
   float: right;
+}
+
+body {
+  background: $black;
+  color: $white;
+}
+
+.welcome {
+  color: $red;
+}
+
+.dropdown-menu {
+  background: $black;
+}
+
+input {
+  background-color: $black;
 }

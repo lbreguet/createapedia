@@ -1,7 +1,7 @@
 {{#each articles as |article|}}
 
   <ul data-id="{{article.id}}">
-    <h3>{{article.title}}</h3>
+    <h3 class="title">{{article.title}}</h3>
     {{#if article.description}}
       <li>{{article.description}}</li>
     {{else}}
