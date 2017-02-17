@@ -1,6 +1,7 @@
 'use strict';
 
 const config = require('../config');
+const store = require('../store');
 
 const index = function () {
   return $.ajax({
@@ -20,6 +21,9 @@ const create = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/articles',
     method: 'POST',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
     data
   });
 };
@@ -28,6 +32,9 @@ const update = function (id, data) {
   return $.ajax({
     url: config.apiOrigin + '/articles/' + id,
     method: 'PATCH',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
     data
   });
 };
@@ -35,7 +42,10 @@ const update = function (id, data) {
 const destroy = function (id) {
   return $.ajax({
     url: config.apiOrigin + '/articles/' + id,
-    method: 'DELETE'
+    method: 'DELETE',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
   });
 };
 

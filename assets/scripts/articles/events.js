@@ -47,6 +47,9 @@ const onDestroyArticles = function (event) {
 };
 
 const addHandlers = () => {
+  $('#edit-article').hide();
+  $('#post-article').hide();
+  $('#article-destroy').hide();
   $("#article-search").on('submit', onGetArticles);
   $("#article-destroy").on('submit', onDestroyArticles);
   $("#edit-article").on('submit', onUpdateArticles);

@@ -21,6 +21,9 @@ const signInSuccess = (data) => {
   $('#sign-in').hide();
   $('#change-password').show();
   $('#sign-out').show();
+  $('#article-destroy').show();
+  $('#edit-article').show();
+  $('#post-article').show();
   if (data) {
     console.log(data);
   }
@@ -31,6 +34,9 @@ const signOutSuccess = (data) => {
   $('#change-password').hide();
   $('#sign-in').show();
   $('#sign-up').show();
+  $('#article-destroy').hide();
+  $('#edit-article').hide();
+  $('#post-article').hide();
   if (data) {
     console.log(data);
   }

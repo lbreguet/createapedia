@@ -9,10 +9,12 @@
 
 const indexSuccess = (data) => {
   console.log(data);
+  $('.title').text(data.title);
 };
 
 const showSuccess = (data) => {
   console.log(data);
+  // $('');
 };
 
 const createSuccess = (data) => {
