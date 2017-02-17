@@ -30,7 +30,7 @@ const onCreateArticles = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
   api.create(data)
-  .then(ui.createSuccess)
+  .then(ui.indexSuccess)
   .catch(ui.failure);
 };
 

@@ -18,10 +18,14 @@ const showSuccess = (data) => {
 };
 
 const createSuccess = (data) => {
+  let showArticlesHtml = showArticlesTemplate({ articles: data.articles });
+  $('.content').empty().append(showArticlesHtml);
   console.log(data);
 };
 
 const updateSuccess = (data) => {
+  let showArticleHtml = showArticleTemplate({ article: data.article });
+  $('.content').empty().append(showArticleHtml);
   console.log(data);
 };
 
