@@ -24,8 +24,11 @@ const createSuccess = (data) => {
 };
 
 const updateSuccess = (data) => {
-  let showArticleHtml = showArticleTemplate({ article: data.article });
-  $('.content').empty().append(showArticleHtml);
+  $('#exampleModal').modal('hide');
+  $('.edit-id').val('');
+  $('.edit-title').val('');
+  $('.edit-description').val('');
+  $('.edit-body').val('');
   console.log(data);
 };
 

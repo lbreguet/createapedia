@@ -146,7 +146,7 @@
     </div>
   </div> -->
 
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"id="edit-modal">Edit an Article</button>
 
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -158,41 +158,32 @@
           </button>
         </div>
         <div class="modal-body">
-          <form>
+          <form class="modal-edit" id="edit-article">
             <div class="form-group">
               <label for="id-num" class="form-control-label">ID:</label>
-              <input type="text" name="article[id]" placeholder="ID">
+              <br>
+              <input class="edit-id" type="text" name="article[id]" placeholder="ID">
+              <br>
               <label for="title-name" class="form-control-label">Title:</label>
-              <input type="text" name="article[title]" placeholder="Title">
+              <br>
+              <input class="edit-title" type="text" name="article[title]" placeholder="Title">
             </div>
             <div class="form-group">
               <label for="message-text" class="form-control-label">Content:</label>
-              <input type="text" name="article[description]" placeholder="Description">
-              <textarea name="article[body]" placeholder="Body"></textarea>
+              <br>
+              <input class="edit-description" type="text" name="article[description]" placeholder="Description">
+              <br>
+              <textarea class="edit-body" name="article[body]" placeholder="Body"></textarea>
             </div>
+            <button type="submit" class="btn btn-default">Confirm</button>
           </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Confirm</button>
+          <div class="modal-footer">
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="btn-group" id="article-destroy">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Delete
-      </button>
-    <div class="dropdown-menu">
-      <form class="articles">
-        <div class="form-group">
-          <input type="text" name="article[id]" placeholder="ID of article to delete">
-        </div>
-        <button type="submit" class="btn btn-danger">Delete Article</button>
-      </form>
-    </div>
-  </div>
 
   <div id="content" class="content">
   </div>

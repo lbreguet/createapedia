@@ -17,6 +17,7 @@ const signInSuccess = (data) => {
   $('.signin-password').val('');
   $('#sign-in').hide();
   $('#change-password').show();
+  $('#edit-modal').show();
   $('#sign-out').show();
   $('#article-destroy').show();
   $('#edit-article').show();

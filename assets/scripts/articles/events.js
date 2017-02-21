@@ -44,20 +44,24 @@ const onUpdateArticles = function (event) {
 
 const onDestroyArticles = function (event) {
   event.preventDefault();
+  let id = event.target.dataset.id;
   console.log('delete');
   let data = getFormFields(event.target);
-  api.destroy(data.article.id)
-  .then(ui.destroySuccess)
+  api.destroy(id)
+  .then(ui.indexSuccess)
   .catch(ui.failure);
 };
 
+
+
 const addHandlers = () => {
+  $('#edit-modal').hide();
   $('#edit-article').hide();
   $('#post-article').hide();
   $('#article-destroy').hide();
   $('#menu').on('submit', onMenu);
   $("#article-search").on('submit', onGetArticles);
-  $("#article-destroy").on('submit', onDestroyArticles);
+  $(".content").on('click', ".article-destroy", onDestroyArticles);
   $("#edit-article").on('submit', onUpdateArticles);
   $("#post-article").on('submit', onCreateArticles);
 };

@@ -2,9 +2,14 @@
   <h3 class="title">{{article.title}}</h3>
   <p>{{article.body}}</p>
   <div>
-    <div data-id = "{{article.id}}" class="btn-group" id="article-destroy">
-      <button type="submit" class="btn btn-danger">
+    <div data-id="{{article.id}}" class="btn-group article-destroy">
+      <button type="button" data-id="{{article.id}}" class="btn btn-danger">
       Delete
+      </button>
+    </div>
+    <div data-id="{{article.id}}" class="btn-group edit-article">
+      <button type="button" data-id="{{article.id}}" class="btn btn-danger">
+      Edit
       </button>
     </div>
   </div>
