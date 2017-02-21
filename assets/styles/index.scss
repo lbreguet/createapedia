@@ -15,6 +15,11 @@ body {
   color: $white;
 }
 
+.modal-content {
+  background: $black;
+  color: $white;
+}
+
 .welcome {
   color: $red;
 }
@@ -31,6 +36,14 @@ body {
 .btn-group {
   background: $black;
   color: $red;
+}
+
+.modal {
+  text-align: center;
+}
+
+.form-group {
+
 }
 
 input {

@@ -43,6 +43,7 @@
         </form>
       </div>
     </div>
+
     <div class="btn-group" id="sign-in">
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Sign In
@@ -64,6 +65,7 @@
         </form>
       </div>
     </div>
+
     <div class="btn-group" id="change-password">
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Change Password
@@ -145,14 +147,12 @@
   </div> -->
 
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
 
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Edit Article</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -160,18 +160,21 @@
         <div class="modal-body">
           <form>
             <div class="form-group">
-              <label for="recipient-name" class="form-control-label">Recipient:</label>
-              <input type="text" class="form-control" id="recipient-name">
+              <label for="id-num" class="form-control-label">ID:</label>
+              <input type="text" name="article[id]" placeholder="ID">
+              <label for="title-name" class="form-control-label">Title:</label>
+              <input type="text" name="article[title]" placeholder="Title">
             </div>
             <div class="form-group">
-              <label for="message-text" class="form-control-label">Message:</label>
-              <textarea class="form-control" id="message-text"></textarea>
+              <label for="message-text" class="form-control-label">Content:</label>
+              <input type="text" name="article[description]" placeholder="Description">
+              <textarea name="article[body]" placeholder="Body"></textarea>
             </div>
           </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send message</button>
+          <button type="submit" class="btn btn-primary">Confirm</button>
         </div>
       </div>
     </div>
