@@ -1,5 +1,6 @@
 <div data-id="{{article.id}}">
   <h3 class="title">{{article.title}}</h3>
+  <p>{{article.description}}</p>
   <p>{{article.body}}</p>
   <div>
     <div data-id="{{article.id}}" class="btn-group article-destroy">
@@ -7,10 +8,38 @@
       Delete
       </button>
     </div>
-    <div data-id="{{article.id}}" class="btn-group edit-article">
-      <button type="button" data-id="{{article.id}}" class="btn btn-danger">
-      Edit
-      </button>
+    <button data-id="{{article.id}}" type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"id="edit-modal">Edit</button>
+
+    <div data-id="{{article.id}}" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit Article</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form data-id="{{article.id}}" class="modal-edit" id="edit-article">
+              <div class="form-group">
+                <label for="title-name" class="form-control-label">Title:</label>
+                <br>
+                <input data-id="{{article.id}}" class="edit-title" type="text" name="article[title]" placeholder="Title">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="form-control-label">Content:</label>
+                <br>
+                <input data-id="{{article.id}}" class="edit-description" type="text" name="article[description]" placeholder="Description">
+                <br>
+                <textarea data-id="{{article.id}}" class="edit-body" name="article[body]" placeholder="Body"></textarea>
+              </div>
+              <button data-id="{{article.id}}" type="submit" class="btn btn-default">Confirm</button>
+            </form>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -19,7 +19,7 @@ const signInSuccess = (data) => {
   $('#change-password').show();
   $('#edit-modal').show();
   $('#sign-out').show();
-  $('#article-destroy').show();
+  $('.article-destroy').show();
   $('#edit-article').show();
   $('#post-article').show();
   if (data) {
