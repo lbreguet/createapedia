@@ -56,7 +56,6 @@ const addHandlers = () => {
   $('#post-article').hide();
   $('#article-destroy').hide();
   $('#menu').on('submit', onMenu);
-  $("one-article").dblclick(onGetArticles);
   $("#article-search").on('submit', onGetArticles);
   $("#article-destroy").on('submit', onDestroyArticles);
   $("#edit-article").on('submit', onUpdateArticles);
