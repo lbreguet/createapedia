@@ -3,21 +3,21 @@
 const config = require('../config');
 const store = require('../store');
 
-const index = function () {
+const index = function() {
   return $.ajax({
     url: config.apiOrigin + '/articles',
     method: 'GET'
   });
 };
 
-const show = function  (id) {
+const show = function(id) {
   return $.ajax({
     url: config.apiOrigin + '/articles/' + id,
     method: 'GET'
   });
 };
 
-const create = function (data) {
+const create = function(data) {
   return $.ajax({
     url: config.apiOrigin + '/articles',
     method: 'POST',
@@ -28,7 +28,7 @@ const create = function (data) {
   });
 };
 
-const update = function (id, data) {
+const update = function(id, data) {
   return $.ajax({
     url: config.apiOrigin + '/articles/' + id,
     method: 'PATCH',
@@ -39,7 +39,7 @@ const update = function (id, data) {
   });
 };
 
-const destroy = function (id) {
+const destroy = function(id) {
   return $.ajax({
     url: config.apiOrigin + '/articles/' + id,
     method: 'DELETE',

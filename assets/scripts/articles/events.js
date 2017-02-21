@@ -31,6 +31,7 @@ const onCreateArticles = function (event) {
   let data = getFormFields(event.target);
   api.create(data)
   .then(ui.createSuccess)
+  .then(ui.showSuccess)
   .catch(ui.failure);
 };
 
@@ -40,6 +41,7 @@ const onUpdateArticles = function (event) {
   let id = event.target.dataset.id;
   api.update(id, data)
   .then(ui.updateSuccess)
+  .then(onGetArticles())
   .catch(ui.failure);
 };
 
@@ -48,7 +50,8 @@ const onDestroyArticles = function (event) {
   let id = event.target.dataset.id;
   console.log('delete');
   api.destroy(id)
-  .then(ui.indexSuccess)
+  .then(ui.destroySuccess)
+  .then(onMenu)
   .catch(ui.failure);
 };
 
@@ -58,7 +61,7 @@ const addHandlers = () => {
   $('#edit-modal').hide();
   $('#edit-article').hide();
   $('#post-article').hide();
-  $('.article-destroy').hide();
+  $('.btn-danger').hide();
   $('#menu').on('submit', onMenu);
   $("#article-search").on('submit', onGetArticles);
   $(".content").on('click', ".article-destroy", onDestroyArticles);
