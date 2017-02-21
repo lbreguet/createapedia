@@ -30,7 +30,7 @@ const onCreateArticles = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
   api.create(data)
-  .then(ui.indexSuccess)
+  .then(ui.createSuccess)
   .catch(ui.failure);
 };
 
@@ -56,6 +56,7 @@ const addHandlers = () => {
   $('#post-article').hide();
   $('#article-destroy').hide();
   $('#menu').on('submit', onMenu);
+  $("one-article").dblclick(onGetArticles);
   $("#article-search").on('submit', onGetArticles);
   $("#article-destroy").on('submit', onDestroyArticles);
   $("#edit-article").on('submit', onUpdateArticles);

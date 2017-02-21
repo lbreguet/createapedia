@@ -111,16 +111,18 @@
     <button type="submit" class="btn btn-default">Search</button>
   </form>
 
-  <div class="btn-group" id="article-destroy">
+  <div class="btn-group" id="post-article">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Delete
+      New Article
       </button>
     <div class="dropdown-menu">
-      <form class="articles">
+      <form class='articles'>
         <div class="form-group">
-          <input type="text" name="article[id]" placeholder="ID of article to delete">
+          <input type="text" name="article[title]" placeholder="Title">
+          <input type="text" name="article[description]" placeholder="Description">
+          <input type="text" name="article[body]" placeholder="Body">
         </div>
-        <button type="submit" class="btn btn-danger">Delete Article</button>
+        <button type="submit" class="btn btn-default">Add An Article</button>
       </form>
     </div>
   </div>
@@ -142,18 +144,16 @@
     </div>
   </div>
 
-  <div class="btn-group" id="post-article">
+  <div class="btn-group" id="article-destroy">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Create
+      Delete
       </button>
     <div class="dropdown-menu">
-      <form class='articles'>
+      <form class="articles">
         <div class="form-group">
-          <input type="text" name="article[title]" placeholder="Title">
-          <input type="text" name="article[description]" placeholder="Description">
-          <input type="text" name="article[body]" placeholder="Body">
+          <input type="text" name="article[id]" placeholder="ID of article to delete">
         </div>
-        <button type="submit" class="btn btn-default">Add An Article</button>
+        <button type="submit" class="btn btn-danger">Delete Article</button>
       </form>
     </div>
   </div>
