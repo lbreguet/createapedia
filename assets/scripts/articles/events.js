@@ -10,7 +10,8 @@ const onMenu = function (event) {
   event.preventDefault();
   api.index()
   .then(ui.indexSuccess)
-  .catch(ui.failure);
+  // .catch(ui.failure)
+  ;
 };
 
 const onGetUserArticles = function (event) {
@@ -21,7 +22,8 @@ const onGetUserArticles = function (event) {
   } else {
     api.showUser(data.article.id)
     .then(ui.showSuccess)
-    .catch(ui.failure);
+    // .catch(ui.failure)
+    ;
   }
 };
 
@@ -33,7 +35,8 @@ const onGetArticles = function (event) {
   } else {
     api.show(data.article.id)
     .then(ui.showSuccess)
-    .catch(ui.failure);
+    // .catch(ui.failure)
+    ;
   }
 };
 
@@ -42,7 +45,8 @@ const onCreateArticles = function (event) {
   let data = getFormFields(event.target);
   api.create(data)
   .then(ui.createSuccess)
-  .catch(ui.failure);
+  // .catch(ui.failure)
+  ;
 };
 
 const onUpdateArticles = function (event) {
@@ -51,7 +55,8 @@ const onUpdateArticles = function (event) {
   let id = event.target.dataset.id;
   api.update(id, data)
   .then(ui.updateSuccess)
-  .catch(ui.failure);
+  // .catch(ui.failure)
+  ;
 };
 
 const onDestroyArticles = function (event) {
@@ -60,7 +65,8 @@ const onDestroyArticles = function (event) {
   console.log('delete');
   api.destroy(id)
   .then(ui.destroySuccess)
-  .catch(ui.failure);
+  // .catch(ui.failure)
+  ;
 };
 
 
