@@ -18,8 +18,10 @@ const showSuccess = (data) => {
 };
 
 const createSuccess = (data) => {
-  let showArticlesHtml = showArticlesTemplate({ articles: data.articles });
-  $('.content').empty().append(showArticlesHtml);
+  $('#exampleModal1').modal('hide');
+  $('.post-title').val('');
+  $('.post-description').val('');
+  $('.post-body').val('');
   console.log(data);
 };
 
