@@ -18,7 +18,7 @@ const showSuccess = (data) => {
 };
 
 const createSuccess = (data) => {
-  $('#exampleModal1').modal('hide');
+  $('#myModal').modal('hide');
   $('.post-title').val('');
   $('.post-description').val('');
   $('.post-body').val('');

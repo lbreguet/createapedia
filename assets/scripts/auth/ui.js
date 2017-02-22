@@ -18,6 +18,7 @@ const signInSuccess = (data) => {
   $('#sign-in').hide();
   $('#change-password').show();
   $('#edit-modal').show();
+  $('#post-modal').show();
   $('#sign-out').show();
   $('.article-destroy').show();
   $('#edit-article').show();
@@ -45,6 +46,7 @@ const signOutSuccess = (data) => {
   $('.article-destroy').hide();
   $('#edit-article').hide();
   $('#edit-modal').hide();
+  $('#post-modal').hide();
   $('#post-article').hide();
   $('#article-search').show();
   $('#article-search-user').hide();

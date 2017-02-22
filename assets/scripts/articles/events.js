@@ -44,7 +44,7 @@ const onCreateArticles = function (event) {
   let data = getFormFields(event.target);
   api.create(data)
   .then(ui.createSuccess)
-  .then(onGetUserArticles)
+  .then(onMenu)
   .catch(ui.failure);
 };
 
@@ -54,7 +54,7 @@ const onUpdateArticles = function (event) {
   let id = event.target.dataset.id;
   api.update(id, data)
   .then(ui.updateSuccess)
-  .then(onGetUserArticles)
+  .then(onGetArticles)
   .catch(ui.failure);
 };
 
@@ -74,6 +74,7 @@ const addHandlers = () => {
   $('#edit-modal').hide();
   $('#edit-article').hide();
   $('#post-article').hide();
+  $('#post-modal').hide();
   $('.btn-danger').hide();
   $('#article-search-user').hide();
   $('#menu').on('submit', onMenu);
