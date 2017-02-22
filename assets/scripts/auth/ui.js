@@ -1,15 +1,12 @@
 'use strict';
 
-const signUpSuccess = (data) => {
+const signUpSuccess = () => {
   $('.signup-email').val('');
   $('.signup-password').val('');
   $('#sign-up').hide();
-  if (data) {
-    console.log(data);
-  }
 };
 
-const signInSuccess = (data) => {
+const signInSuccess = () => {
   $('#sign-up').hide();
   $('.signup-email').val('');
   $('.signup-password').val('');
@@ -25,20 +22,14 @@ const signInSuccess = (data) => {
   $('#post-article').show();
   $('#article-search').hide();
   $('#article-search-user').show();
-  if (data) {
-    console.log(data);
-  }
 };
 
-const changePasswordSuccess = (data) => {
+const changePasswordSuccess = () => {
   $('.new-password').val('');
   $('.old-password').val('');
-  if (data) {
-    console.log(data);
-  }
 };
 
-const signOutSuccess = (data) => {
+const signOutSuccess = () => {
   $('#sign-out').hide();
   $('#change-password').hide();
   $('#sign-in').show();
@@ -50,9 +41,6 @@ const signOutSuccess = (data) => {
   $('#post-article').hide();
   $('#article-search').show();
   $('#article-search-user').hide();
-  if (data) {
-    console.log(data);
-  }
 };
 
 

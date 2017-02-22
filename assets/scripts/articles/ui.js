@@ -5,40 +5,35 @@ const showArticleTemplate = require('../templates/article-show.handlebars');
 
 
 const indexSuccess = (data) => {
-  console.log(data);
   let showArticlesHtml = showArticlesTemplate({ articles: data.articles });
   $('.content').empty().append(showArticlesHtml);
 };
 
 const showSuccess = (data) => {
-  console.log(data);
   let showArticleHtml = showArticleTemplate({ article: data.article });
   $('.content').empty().append(showArticleHtml);
   $('.show-input').val('');
 };
 
-const createSuccess = (data) => {
+const createSuccess = () => {
   $('#myModal').modal('hide');
   $('.post-title').val('');
   $('.post-description').val('');
   $('.post-body').val('');
   $('.content').empty();
-  console.log(data);
 };
 
-const updateSuccess = (data) => {
+const updateSuccess = () => {
   $('#exampleModal').modal('hide');
   $('.edit-id').val('');
   $('.edit-title').val('');
   $('.edit-description').val('');
   $('.edit-body').val('');
   $('.content').empty();
-  console.log(data);
 };
 
-const destroySuccess = (data) => {
+const destroySuccess = () => {
   $('.content').empty();
-  console.log(data);
 };
 
 
@@ -54,6 +49,5 @@ module.exports = {
   createSuccess,
   updateSuccess,
   destroySuccess,
-  // success,
   failure
 };
