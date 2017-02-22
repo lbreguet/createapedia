@@ -22,6 +22,7 @@ const createSuccess = (data) => {
   $('.post-title').val('');
   $('.post-description').val('');
   $('.post-body').val('');
+  $('.content').empty();
   console.log(data);
 };
 
@@ -31,10 +32,12 @@ const updateSuccess = (data) => {
   $('.edit-title').val('');
   $('.edit-description').val('');
   $('.edit-body').val('');
+  $('.content').empty();
   console.log(data);
 };
 
 const destroySuccess = (data) => {
+  $('.content').empty();
   console.log(data);
 };
 
