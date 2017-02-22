@@ -17,6 +17,16 @@ const show = function(id) {
   });
 };
 
+const showUser = function(id) {
+  return $.ajax({
+    url: config.apiOrigin + '/articles/' + id,
+    method: 'GET',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
+  });
+};
+
 const create = function(data) {
   return $.ajax({
     url: config.apiOrigin + '/articles',
@@ -54,6 +64,7 @@ const destroy = function(id) {
 module.exports = {
   index,
   show,
+  showUser,
   create,
   update,
   destroy

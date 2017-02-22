@@ -19,9 +19,11 @@ const signInSuccess = (data) => {
   $('#change-password').show();
   $('#edit-modal').show();
   $('#sign-out').show();
-  $('#article-destroy').show();
+  $('.article-destroy').show();
   $('#edit-article').show();
   $('#post-article').show();
+  $('#article-search').hide();
+  $('#article-search-user').show();
   if (data) {
     console.log(data);
   }
@@ -40,10 +42,12 @@ const signOutSuccess = (data) => {
   $('#change-password').hide();
   $('#sign-in').show();
   $('#sign-up').show();
-  $('#article-destroy').hide();
+  $('.article-destroy').hide();
   $('#edit-article').hide();
   $('#edit-modal').hide();
   $('#post-article').hide();
+  $('#article-search').show();
+  $('#article-search-user').hide();
   if (data) {
     console.log(data);
   }

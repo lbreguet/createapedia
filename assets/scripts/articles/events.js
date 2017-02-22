@@ -13,6 +13,19 @@ const onMenu = function (event) {
   .catch(ui.failure);
 };
 
+const onGetUserArticles = function (event) {
+  event.preventDefault();
+  let data =  getFormFields(event.target);
+
+  if (data.article.id.length === 0) {
+    api.showUser.then(ui.failure);
+  } else {
+    api.showUser(data.article.id)
+    .then(ui.showSuccess)
+    .catch(ui.failure);
+  }
+};
+
 const onGetArticles = function (event) {
   event.preventDefault();
   let data =  getFormFields(event.target);
@@ -31,7 +44,7 @@ const onCreateArticles = function (event) {
   let data = getFormFields(event.target);
   api.create(data)
   .then(ui.createSuccess)
-  .then(onGetArticles)
+  .then(onGetUserArticles)
   .catch(ui.failure);
 };
 
@@ -41,7 +54,7 @@ const onUpdateArticles = function (event) {
   let id = event.target.dataset.id;
   api.update(id, data)
   .then(ui.updateSuccess)
-  .then(onGetArticles)
+  .then(onGetUserArticles)
   .catch(ui.failure);
 };
 
@@ -62,7 +75,9 @@ const addHandlers = () => {
   $('#edit-article').hide();
   $('#post-article').hide();
   $('.btn-danger').hide();
+  $('#article-search-user').hide();
   $('#menu').on('submit', onMenu);
+  $("#article-search-user").on('submit', onGetUserArticles);
   $("#article-search").on('submit', onGetArticles);
   $(".content").on('click', ".article-destroy", onDestroyArticles);
   $(".content").on('submit', "#edit-article", onUpdateArticles);

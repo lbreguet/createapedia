@@ -26,7 +26,7 @@
           <fieldset>
             <label class="email">
                 Email
-                <input type="text" name="credentials[email]" class="signup-email">
+                <input type="email" name="credentials[email]" class="signup-email">
           </label>
 
             <label class="password">
@@ -53,7 +53,7 @@
           <fieldset>
             <label class="email">
               Email
-            <input type="text" name="credentials[email]" class="signin-email">
+            <input type="email" name="credentials[email]" class="signin-email">
           </label>
 
             <label class="password">
@@ -107,6 +107,13 @@
   </div>
 
   <form id="article-search" class="article-search">
+    <div class="form-group">
+      <input type="text" name="article[id]" placeholder="Search" class="show-input">
+    </div>
+    <button type="submit" class="btn btn-default">Search</button>
+  </form>
+
+  <form id="article-search-user" class="article-search-user">
     <div class="form-group">
       <input type="text" name="article[id]" placeholder="Search" class="show-input">
     </div>
