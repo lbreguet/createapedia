@@ -12,7 +12,7 @@
 
     <button data-id="{{article.id}}" type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"id="edit-modal">Edit</button>
 
-    <div data-id="{{article.id}}" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div data-id="{{article.id}}" class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -26,12 +26,12 @@
               <div class="form-group">
                 <label for="title-name" class="form-control-label">Title:</label>
                 <br>
-                <input data-id="{{article.id}}" class="edit-title" type="text" name="article[title]" placeholder="Title">
+                <input data-id="{{article.title}}" class="edit-title" type="text" name="article[title]" placeholder="Title">
               </div>
               <div class="form-group">
                 <label for="message-text" class="form-control-label">Content:</label>
                 <br>
-                <input data-id="{{article.id}}" class="edit-description" type="text" name="article[description]" placeholder="Description">
+                <input data-id="{{article.description}}" class="edit-description" type="text" name="article[description]" placeholder="Description">
                 <br>
                 <textarea data-id="{{article.id}}" class="edit-body" name="article[body]" placeholder="Body"></textarea>
               </div>

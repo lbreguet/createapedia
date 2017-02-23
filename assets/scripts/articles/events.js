@@ -6,65 +6,65 @@ const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
 
-const onMenu = function (event) {
+const onMenu = function(event) {
   event.preventDefault();
   api.index()
-  .then(ui.indexSuccess)
+    .then(ui.indexSuccess)
   // .catch(ui.failure)
   ;
 };
 
-const onGetUserArticles = function (event) {
+const onGetUserArticles = function(event) {
   event.preventDefault();
-  let data =  getFormFields(event.target);
+  let data = getFormFields(event.target);
   if (data.article.id.length === 0) {
     api.showUser.then(ui.failure);
   } else {
     api.showUser(data.article.id)
-    .then(ui.showSuccess)
+      .then(ui.showSuccess)
     // .catch(ui.failure)
     ;
   }
 };
 
-const onGetArticles = function (event) {
+const onGetArticles = function(event) {
   event.preventDefault();
-  let data =  getFormFields(event.target);
+  let data = getFormFields(event.target);
   if (data.article.id.length === 0) {
     api.show.then(ui.failure);
   } else {
     api.show(data.article.id)
-    .then(ui.showSuccess)
+      .then(ui.showSuccess)
     // .catch(ui.failure)
     ;
   }
 };
 
-const onCreateArticles = function (event) {
+const onCreateArticles = function(event) {
   event.preventDefault();
   let data = getFormFields(event.target);
   api.create(data)
-  .then(ui.createSuccess)
+    .then(ui.createSuccess)
   // .catch(ui.failure)
   ;
 };
 
-const onUpdateArticles = function (event) {
+const onUpdateArticles = function(event) {
   event.preventDefault();
   let data = getFormFields(event.target);
   let id = event.target.dataset.id;
   api.update(id, data)
-  .then(ui.updateSuccess)
+    .then(ui.updateSuccess)
   // .catch(ui.failure)
   ;
 };
 
-const onDestroyArticles = function (event) {
+const onDestroyArticles = function(event) {
   event.preventDefault();
   let id = event.target.dataset.id;
   console.log('delete');
   api.destroy(id)
-  .then(ui.destroySuccess)
+    .then(ui.destroySuccess)
   // .catch(ui.failure)
   ;
 };

@@ -25,7 +25,6 @@ const createSuccess = () => {
 
 const updateSuccess = () => {
   $('#exampleModal').modal('hide');
-  $('.edit-id').val('');
   $('.edit-title').val('');
   $('.edit-description').val('');
   $('.edit-body').val('');
