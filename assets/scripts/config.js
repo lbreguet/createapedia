@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://createapedia.herokuapp.com/',
+    production: 'https://createapedia.herokuapp.com',
   },
 };
 
