@@ -62,5 +62,5 @@ the `show` action, kind of like clicking on a link in Wikipedia.
   9. A user should have a comfortable experience when traversing the website.
 
 ## Wireframe
-![alt text](https://github.com/lbreguet/createapedia/blob/master/wireframe-1.JPG "Wireframe")
-![alt text](https://github.com/lbreguet/createapedia/blob/master/wireframe-2.JPG "Wireframe")
+![alt text](https://github.com/lbreguet/createapedia/blob/master/wireframe-1.jpg "Wireframe")
+![alt text](https://github.com/lbreguet/createapedia/blob/master/wireframe-2.jpg "Wireframe")
