@@ -54,3 +54,11 @@ input {
 textarea {
   background-color: $black;
 }
+
+.update-failure {
+  color: $red;
+}
+
+.create-failure {
+  color: $red;
+}

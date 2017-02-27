@@ -45,7 +45,7 @@ const onCreateArticles = function(event) {
   let data = getFormFields(event.target);
   api.create(data)
     .then(ui.createSuccess)
-  // .catch(ui.failure)
+    .catch(ui.createFailure)
   ;
 };
 
@@ -55,7 +55,7 @@ const onUpdateArticles = function(event) {
   let id = event.target.dataset.id;
   api.update(id, data)
     .then(ui.updateSuccess)
-  // .catch(ui.failure)
+    .catch(ui.updateFailure)
   ;
 };
 

@@ -21,6 +21,11 @@ const createSuccess = () => {
   $('.post-description').val('');
   $('.post-body').val('');
   $('.content').empty();
+  $('.create-failure').text('');
+};
+
+const createFailure = () => {
+  $('.create-failure').text('Please fill in all of the blanks.')
 };
 
 const updateSuccess = () => {
@@ -29,6 +34,11 @@ const updateSuccess = () => {
   $('.edit-description').val('');
   $('.edit-body').val('');
   $('.content').empty();
+  $('.update-failure').text('');
+};
+
+const updateFailure = () => {
+  $('.update-failure').text('Please fill in all of the blanks.');
 };
 
 const destroySuccess = () => {
@@ -46,7 +56,9 @@ module.exports = {
   indexSuccess,
   showSuccess,
   createSuccess,
+  createFailure,
   updateSuccess,
+  updateFailure,
   destroySuccess,
   failure
 };
