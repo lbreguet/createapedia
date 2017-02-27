@@ -18,11 +18,11 @@ const onGetUserArticles = function(event) {
   event.preventDefault();
   let data = getFormFields(event.target);
   if (data.article.id.length === 0) {
-    $('#searchbar-user').text('Please enter a valid ID number.');
+    $('#searchbar-user').text('Please Enter a Valid ID Number.');
   } else {
     api.showUser(data.article.id)
       .then(ui.showSuccess)
-    // .catch(ui.failure)
+      .catch(ui.ShowUserFailure)
     ;
   }
 };
@@ -31,11 +31,11 @@ const onGetArticles = function(event) {
   event.preventDefault();
   let data = getFormFields(event.target);
   if (data.article.id.length === 0) {
-    $('#searchbar').text('Please enter a valid ID number.');
+    $('#searchbar').text('Please Enter a Valid ID Number.');
   } else {
     api.show(data.article.id)
       .then(ui.showSuccess)
-    // .catch(ui.failure)
+      .catch(ui.showFailure)
     ;
   }
 };
