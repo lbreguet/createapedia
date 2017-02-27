@@ -24,7 +24,7 @@ $(() => {
     if (password.value !== password_confirmation.value) {
       password_confirmation.setCustomValidity("Passwords Don't Match!");
     } else {
-      password_confirmation.setCustomValisdity('');
+      password_confirmation.setCustomValidity('');
     }
   }
 

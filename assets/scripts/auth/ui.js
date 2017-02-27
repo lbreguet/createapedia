@@ -57,6 +57,25 @@ const signOutSuccess = () => {
   $('#post-article').hide();
   $('#article-search').show();
   $('#article-search-user').hide();
+  $('.signup-email').val('');
+  $('.signup-password').val('');
+  $('.signup-failure').text('');
+  $('.new-password').val('');
+  $('.old-password').val('');
+  $('.changepw-failure').text('');
+  $('.signup-email').val('');
+  $('.signup-password').val('');
+  $('.signin-email').val('');
+  $('.signin-password').val('');
+  $('.edit-title').val('');
+  $('.edit-description').val('');
+  $('.edit-body').val('');
+  $('.content').empty();
+  $('.update-failure').text('');
+  $('.post-title').val('');
+  $('.post-description').val('');
+  $('.post-body').val('');
+  $('.create-failure').text('');
 };
 
 
