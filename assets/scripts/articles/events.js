@@ -18,7 +18,7 @@ const onGetUserArticles = function(event) {
   event.preventDefault();
   let data = getFormFields(event.target);
   if (data.article.id.length === 0) {
-    api.showUser.then(ui.failure);
+    $('#searchbar-user').text('Please enter a valid ID number.');
   } else {
     api.showUser(data.article.id)
       .then(ui.showSuccess)
@@ -31,7 +31,7 @@ const onGetArticles = function(event) {
   event.preventDefault();
   let data = getFormFields(event.target);
   if (data.article.id.length === 0) {
-    api.show.then(ui.failure);
+    $('#searchbar').text('Please enter a valid ID number.');
   } else {
     api.show(data.article.id)
       .then(ui.showSuccess)
