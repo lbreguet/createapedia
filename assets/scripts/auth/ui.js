@@ -4,6 +4,11 @@ const signUpSuccess = () => {
   $('.signup-email').val('');
   $('.signup-password').val('');
   $('#sign-up').hide();
+  $('.signup-failure').text('');
+};
+
+const signUpFailure = () => {
+  $('.signup-failure').text('This user already exists. Please choose another email.');
 };
 
 const signInSuccess = () => {
@@ -22,11 +27,22 @@ const signInSuccess = () => {
   $('#post-article').show();
   $('#article-search').hide();
   $('#article-search-user').show();
+  $('.signin-failure').text('');
+};
+
+const signInFailure = () => {
+  $('.signin-failure').text('The email and/or password do not match. Try Again.');
 };
 
 const changePasswordSuccess = () => {
   $('.new-password').val('');
   $('.old-password').val('');
+  $('.changepw-failure').text('');
+
+};
+
+const changePasswordFailure = () => {
+  $('.changepw-failure').text('Type in the password associated with this account!');
 };
 
 const signOutSuccess = () => {
@@ -51,8 +67,11 @@ const failure = (error) => {
 
 module.exports = {
   signUpSuccess,
+  signUpFailure,
   signInSuccess,
+  signInFailure,
   signOutSuccess,
   changePasswordSuccess,
+  changePasswordFailure,
   failure
 };

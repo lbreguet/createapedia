@@ -17,4 +17,17 @@ const articles = require('./articles/events');
 $(() => {
   auth.addHandlers();
   articles.addHandlers();
+  let password = document.getElementById("password"),
+    password_confirmation = document.getElementById("password_confirmation");
+
+  function validatePassword() {
+    if (password.value !== password_confirmation.value) {
+      password_confirmation.setCustomValidity("Passwords Don't Match!");
+    } else {
+      password_confirmation.setCustomValisdity('');
+    }
+  }
+
+  password.onchange = validatePassword;
+  password_confirmation.onkeyup = validatePassword;
 });
