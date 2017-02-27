@@ -7,6 +7,8 @@ const showArticleTemplate = require('../templates/article-show.handlebars');
 const indexSuccess = (data) => {
   let showArticlesHtml = showArticlesTemplate({ articles: data.articles });
   $('.content').empty().append(showArticlesHtml);
+  $('#searchbar-user').text('');
+  $('#searchbar').text('');
 };
 
 const showSuccess = (data) => {
