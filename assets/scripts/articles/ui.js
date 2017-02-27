@@ -13,6 +13,8 @@ const showSuccess = (data) => {
   let showArticleHtml = showArticleTemplate({ article: data.article });
   $('.content').empty().append(showArticleHtml);
   $('.show-input').val('');
+  $('#searchbar-user').text('');
+  $('#searchbar').text('');
 };
 
 const createSuccess = () => {

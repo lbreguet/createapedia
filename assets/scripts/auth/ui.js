@@ -32,6 +32,8 @@ const signInSuccess = () => {
   $('#article-search').hide();
   $('#article-search-user').show();
   $('.signin-failure').text('');
+  $('#searchbar-user').text('');
+  $('#searchbar').text('');
 };
 
 const signInFailure = () => {
@@ -80,6 +82,8 @@ const signOutSuccess = () => {
   $('.post-description').val('');
   $('.post-body').val('');
   $('.create-failure').text('');
+  $('#searchbar-user').text('');
+  $('#searchbar').text('');
 };
 
 
