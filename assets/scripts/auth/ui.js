@@ -41,7 +41,7 @@ const signInFailure = () => {
 const changePasswordSuccess = () => {
   $('.new-password').val('');
   $('.old-password').val('');
-  $('.changepw-failure').text('');
+  $('.changepw-failure').text('Password has been successfully updated!');
 
 };
 
