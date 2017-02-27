@@ -27,14 +27,14 @@
               <div class="form-group">
                 <label for="title-name" class="form-control-label">Title:</label>
                 <br>
-                <input data-id="{{article.title}}" class="edit-title" type="text" name="article[title]" placeholder="Title">
+                <input data-id="{{article.title}}" class="edit-title" type="text" name="article[title]" value="{{article.title}}">
               </div>
               <div class="form-group">
                 <label for="message-text" class="form-control-label">Content:</label>
                 <br>
-                <input data-id="{{article.description}}" class="edit-description" type="text" name="article[description]" placeholder="Description">
+                <input data-id="{{article.description}}" class="edit-description" type="text" name="article[description]" value="{{article.description}}">
                 <br>
-                <textarea data-id="{{article.id}}" class="edit-body" name="article[body]" placeholder="Body"></textarea>
+                <textarea data-id="{{article.body}}" class="edit-body" name="article[body]" value="{{article.body}}">{{article.body}}</textarea>
               </div>
               <button data-id="{{article.id}}" type="submit" class="btn btn-default">Confirm</button>
             </form>
