@@ -18,6 +18,10 @@ const signInSuccess = () => {
   $('.signin-email').val('');
   $('.signin-password').val('');
   $('#sign-in').hide();
+  $('.signup-email').val('');
+  $('.signup-password').val('');
+  $('#sign-up').hide();
+  $('.signup-failure').text('');
   $('#change-password').show();
   $('#edit-modal').show();
   $('#post-modal').show();
@@ -37,7 +41,7 @@ const signInFailure = () => {
 const changePasswordSuccess = () => {
   $('.new-password').val('');
   $('.old-password').val('');
-  $('.changepw-failure').text('');
+  $('.changepw-failure').text('Password has been successfully updated!');
 
 };
 
