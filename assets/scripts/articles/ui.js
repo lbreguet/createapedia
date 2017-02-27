@@ -17,6 +17,14 @@ const showSuccess = (data) => {
   $('#searchbar').text('');
 };
 
+const showUserFailure = () => {
+  $('#searchbar-user').text('Please Enter a Valid ID Number.');
+};
+
+const showFailure = () => {
+  $('#searchbar').text('Please Enter a Valid ID Number.');
+};
+
 const createSuccess = () => {
   $('#myModal').modal('hide');
   $('.post-title').val('');
@@ -57,6 +65,8 @@ const failure = (error) => {
 module.exports = {
   indexSuccess,
   showSuccess,
+  showUserFailure,
+  showFailure,
   createSuccess,
   createFailure,
   updateSuccess,
