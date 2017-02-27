@@ -25,7 +25,7 @@ const createSuccess = () => {
 };
 
 const createFailure = () => {
-  $('.create-failure').text('Please fill in all of the blanks.')
+  $('.create-failure').text('Please fill in all of the blanks.');
 };
 
 const updateSuccess = () => {
