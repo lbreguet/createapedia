@@ -37,7 +37,7 @@ const signInSuccess = () => {
 };
 
 const signInFailure = () => {
-  $('.signin-failure').text('The email and/or password do not match. Try Again.');
+  $('.signin-failure').text('The email and/or password do not match with existing user. Try Again.');
 };
 
 const changePasswordSuccess = () => {
