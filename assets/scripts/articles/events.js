@@ -81,8 +81,6 @@ const addHandlers = () => {
   $('#menu').on('submit', onMenu);
   $("#article-search-user").on('submit', onGetUserArticles);
   $("#article-search").on('submit', onGetArticles);
-  $(".title").on('dblclick', onGetUserArticles);
-  $(".title").on('dblclick', onGetArticles);
   $(".content").on('click', ".article-destroy", onDestroyArticles);
   $(".content").on('submit', "#edit-article", onUpdateArticles);
   $("#post-article").on('submit', onCreateArticles);
