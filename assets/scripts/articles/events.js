@@ -22,7 +22,7 @@ const onGetUserArticles = function(event) {
   } else {
     api.showUser(data.article.id)
       .then(ui.showSuccess)
-      .catch(ui.ShowUserFailure)
+      .catch(ui.showUserFailure)
     ;
   }
 };
